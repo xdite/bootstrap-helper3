@@ -105,6 +105,21 @@ Generated HTML:
 
 ### `ibutton`
 
+In view:
+
+```erb
+<%= ibutton("Home", root_path, :class => "btn btn-primary", :iclass => "glyphicon glyphicon-home") %>
+```
+
+Generated HTML:
+
+```html
+<a class="btn btn-primary" href="/">
+  <i class="glyphicon glyphicon-home"></i>
+  <span> Home</span>
+</a>
+```
+
 
 ## Other Features
 

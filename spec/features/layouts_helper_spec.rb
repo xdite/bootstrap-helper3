@@ -16,6 +16,13 @@ feature "LayoutsHelper" do
   scenario "notice_message" do
     visit root_path
 
-    expect(page).to have_css(".alert", :count => 2)
+    expect(page).to have_css("div.alert", :count => 2)
+  end
+
+  scenario "ibutton" do
+    visit root_path
+
+    expect(page).to have_css("a.btn.btn-primary[href='/'] i.glyphicon.glyphicon-home")
+    expect(page).to have_css("a.btn.btn-primary[href='/'] span")
   end
 end

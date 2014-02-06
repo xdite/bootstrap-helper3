@@ -35,5 +35,14 @@ module BootstrapHelper3
       alerts.join("\n").html_safe
     end
 
+    def ibutton(text, path, options = {})
+      iclass = options.delete(:iclass) || ""
+      icon = content_tag(:i, "", :class => iclass)
+
+      link_to path, options do
+        icon + content_tag(:span, " #{text}")
+      end
+    end
+
   end
 end
