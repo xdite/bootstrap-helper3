@@ -121,12 +121,69 @@ Generated HTML:
 ```
 
 
-## Other Features
-
-### Pagination
+## Initializers
 
 ### Form
 
+TODO
+
+### Pagination
+
+In controller:
+
+```ruby
+class PagesController < ApplicationController
+  def welcome
+    @posts = Post.paginate(:page => params[:page], :per_page => 10)
+  end
+end
+```
+
+In view:
+
+```erb
+<%= will_paginate @posts %>
+```
+
+Generated HTML:
+
+```html
+<ul class="pagination">
+  <li class="prev previous_page">
+    <a rel="prev start" href="/?page=1">← Previous</a>
+  </li>
+  <li>
+    <a rel="prev start" href="/?page=1">1</a>
+  </li>
+  <li class="active">
+    <a href="/?page=2">2</a>
+  </li>
+  <li>
+    <a rel="next" href="/?page=3">3</a>
+  </li>
+  <li>
+    <a href="/?page=4">4</a>
+  </li>
+
+  <!-- ... -->
+
+  <li>
+    <a href="/?page=9">9</a>
+  </li>
+  <li class="disabled">
+    <a href="#"><span class="gap">…</span></a>
+  </li>
+  <li>
+    <a href="/?page=99">99</a>
+  </li>
+  <li>
+    <a href="/?page=100">100</a>
+  </li>
+  <li class="next next_page">
+    <a rel="next" href="/?page=3">Next →</a>
+  </li>
+</ul>
+```
 
 ## Testing
 

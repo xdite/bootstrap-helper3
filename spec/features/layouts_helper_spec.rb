@@ -25,4 +25,11 @@ feature "LayoutsHelper" do
     expect(page).to have_css("a.btn.btn-primary[href='/'] i.glyphicon.glyphicon-home")
     expect(page).to have_css("a.btn.btn-primary[href='/'] span")
   end
+
+  scenario "will_paginate" do
+    visit root_path
+
+    expect(page).to have_css("ul.pagination li.active")
+    expect(page).to have_css("ul.pagination li.disabled")
+  end
 end
