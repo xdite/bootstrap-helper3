@@ -30,3 +30,4 @@ module Dummy
   end
 end
 
+SITE_NAME = "Dummy"

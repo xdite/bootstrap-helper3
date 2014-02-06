@@ -16,6 +16,33 @@ And then run `bundle install`.
 
 ### `render_page_title`
 
+In `config/application.rb`:
+
+```ruby
+SITE_NAME = "My Site"
+```
+
+In controller:
+
+```ruby
+class PagesController < ApplicationController
+  def welcome
+    @page_title = "Welcome"
+  end
+end
+```
+
+In view:
+
+```ruby
+<%= render_page_title %>
+```
+
+Generated HTML:
+
+```html
+<title>Welcome | My Site</title>
+```
 
 ### `render_body_tag`
 

@@ -1,5 +1,11 @@
 module BootstrapHelper3
   module LayoutsHelper
+
+    def render_page_title
+      title = @page_title ? "#{@page_title} | #{SITE_NAME}" : SITE_NAME rescue "SITE_NAME"
+      content_tag("title", title, nil, false)
+    end
+
     def render_body_tag
       body_class   = "#{controller_name}-controller #{action_name}-action"
       id_attribute = @body_id.present? ? %Q(id="#{@body_id}-page" ) : ""
@@ -10,5 +16,6 @@ module BootstrapHelper3
         <!--[if !IE]>-->   <body #{id_attribute}class="#{body_class}">  <!--<![endif]-->
       BODY_TAG
     end
+
   end
 end
