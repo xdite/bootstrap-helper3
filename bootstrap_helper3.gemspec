@@ -7,13 +7,13 @@ require "bootstrap_helper3/version"
 Gem::Specification.new do |s|
   s.name        = "bootstrap_helper3"
   s.version     = BootstrapHelper3::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of BootstrapHelper3."
-  s.description = "TODO: Description of BootstrapHelper3."
+  s.authors     = ["Rocodev"]
+  s.email       = ["tech@rocodev.com"]
+  s.homepage    = "https://github.com/xdite/bootstrap-helper3"
+  s.summary     = "View helpers for bootstrap 3"
+  s.description = "View helpers for bootstrap 3"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 4.0.2"
 
