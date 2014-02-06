@@ -5,9 +5,13 @@ require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "sprockets/railtie"
-# require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
+
+require "sass-rails"
+require "jquery-rails"
+require "bootstrap-sass"
+
 require "bootstrap_helper3"
 
 module Dummy
