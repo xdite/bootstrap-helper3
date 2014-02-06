@@ -12,6 +12,11 @@ Add the gem to `Gemfile`:
 And then run `bundle install`.
 
 
+## Compatibility
+
+Currently, `bootstrap_helpers3` works on Rails 4.0.x.
+
+
 ## Helpers
 
 ### `render_page_title`
