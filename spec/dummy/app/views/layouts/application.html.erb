@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,8 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body>
+
+<%= render_body_tag %>
 
   <%= render "layouts/navbar" %>
 
@@ -21,4 +23,5 @@
 
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
+
 </html>

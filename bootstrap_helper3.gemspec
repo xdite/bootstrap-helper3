@@ -1,9 +1,7 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-# Maintain your gem's version:
 require "bootstrap_helper3/version"
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "bootstrap_helper3"
   s.version     = BootstrapHelper3::VERSION
@@ -24,4 +22,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "jquery-rails", "~> 3.1.0"
   s.add_development_dependency "sass-rails", "~> 4.0.1"
   s.add_development_dependency "bootstrap-sass", "~> 3.1.0.2"
+  s.add_development_dependency "better_errors", "~> 1.1.0"
+  s.add_development_dependency "binding_of_caller", "~> 0.7.2"
 end
