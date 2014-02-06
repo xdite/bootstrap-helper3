@@ -12,4 +12,10 @@ feature "LayoutsHelper" do
 
     expect(page).to have_css("body#welcome-page.pages-controller.welcome-action")
   end
+
+  scenario "notice_message" do
+    visit root_path
+
+    expect(page).to have_css(".alert", :count => 2)
+  end
 end

@@ -34,7 +34,7 @@ end
 
 In view:
 
-```ruby
+```erb
 <%= render_page_title %>
 ```
 
@@ -58,8 +58,8 @@ end
 
 In view:
 
-```ruby
-render_body_tag
+```erb
+<%= render_body_tag %>
 ```
 
 Generated HTML:
@@ -71,6 +71,39 @@ Generated HTML:
 ```
 
 ### `notice_message`
+
+In controller:
+
+```ruby
+class PagesController < ApplicationController
+  def welcome
+    flash[:notice] = "Success message."
+    flash[:alert] = "Error message."
+  end
+end
+```
+
+In view:
+
+```erb
+<%= notice_message %>
+```
+
+Generated HTML:
+
+```html
+<div class="alert alert-success alert-dismissable">
+  <button aria-hidden="true" class="close" data-dismiss="alert">×</button>
+  Success message.
+</div>
+
+<div class="alert alert-danger alert-dismissable">
+  <button aria-hidden="true" class="close" data-dismiss="alert">×</button>
+  Error message.
+</div>
+```
+
+### `ibutton`
 
 
 ## Other Features
