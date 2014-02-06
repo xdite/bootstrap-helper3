@@ -1,6 +1,6 @@
-# Bootstrap Helper 3
+# Bootstrap Helper 3 (UNRELEASED)
 
-View helpers for bootstrap 3.
+View helpers and initializers for Bootstrap 3.
 
 
 ## Installation
@@ -125,7 +125,34 @@ Generated HTML:
 
 ### Form
 
-TODO
+In view:
+
+```erb
+<%= simple_form_for @user, :url => root_path do |f| %>
+  <%= f.input :name %>
+
+  <%= f.button :submit, :class => "btn btn-default" %>
+<% end %>
+```
+
+Generated HTML:
+
+```html
+<form accept-charset="UTF-8" action="/" class="simple_form new_user" id="new_user" method="post">
+  <!-- ... -->
+
+  <div class="form-group string required user_name">
+    <label class="string required" for="user_name">
+      <abbr title="required">*</abbr>
+      Name
+    </label>
+    <input aria-required="true" class="string required form-control" id="user_name" name="user[name]" required="required" type="text" value="John Smith">
+  </div>
+
+  <input class="button btn btn-default" name="commit" type="submit" value="Create User">
+</form>
+```
+
 
 ### Pagination
 

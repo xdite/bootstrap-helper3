@@ -12,6 +12,9 @@ require "sass-rails"
 require "jquery-rails"
 require "bootstrap-sass"
 
+require "simple_form"
+require "will_paginate"
+
 require "bootstrap_helper3"
 
 module Dummy

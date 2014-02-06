@@ -26,6 +26,12 @@ feature "LayoutsHelper" do
     expect(page).to have_css("a.btn.btn-primary[href='/'] span")
   end
 
+  scenario "simple_form" do
+    visit root_path
+
+    expect(page).to have_css("form div.form-group input")
+  end
+
   scenario "will_paginate" do
     visit root_path
 
