@@ -12,11 +12,6 @@ Add the gem to `Gemfile`:
 And then run `bundle install`.
 
 
-## Compatibility
-
-Currently, `bootstrap_helpers3` works on Rails 4.0.x.
-
-
 ## Helpers
 
 ### `render_page_title`
@@ -221,6 +216,11 @@ Generated HTML:
 ## Example
 
 See the [dummp app](https://github.com/xdite/bootstrap-helper3/tree/master/spec/dummy).
+
+
+## Compatibility
+
+`bootstrap_helpers3` works on Rails 3.2 and 4.0.
 
 
 ## Testing
