@@ -44,5 +44,13 @@ module BootstrapHelper3
       end
     end
 
+    def yield_or_default(message, default_message = "")
+      message.nil? ? default_message : message
+    end
+
+    def s(html)
+      sanitize(html, :tags => %w(table thead tbody tr td th ol ul li div span font img sup sub br hr a pre p h1 h2 h3 h4 h5 h6), :attributes => %w(style src href size color))
+    end
+
   end
 end

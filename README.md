@@ -217,6 +217,12 @@ Generated HTML:
 </ul>
 ```
 
+
+## Example
+
+See the [dummp app](https://github.com/xdite/bootstrap-helper3/tree/master/spec/dummy).
+
+
 ## Testing
 
     rspec
